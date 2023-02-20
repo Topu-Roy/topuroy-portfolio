@@ -1,13 +1,31 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {@apply bg-backgroundColor}
+h1, h2 {@apply font-josefin-sans font-semibold text-headlineColor}
+p, li, a, button {@apply font-roboto text-textColor}
+.width {@apply max-w-[1536px] mx-auto}
+
+
+.headline {
+  font-size: clamp(2rem, 2.5vw, 3rem);
+}
+.headline-md {
+  font-size: clamp(2rem, 3vw, 3rem);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.sub-headline {
+  @apply text-sm sm:text-base xl:text-lg
+}
+.headline {
+  @apply text-[2rem] sm:text-[2rem]  md:text-[3rem] px-8 mt-4 sm:mt-8 md:mt-14 sm:mb-2 md:mb-4 xl:text-[4rem] xl:px-12 xl:mt-16
+}
+
+.card-basic {
+  @apply h-[25rem] w-[20rem] rounded-2xl shadow-2xl border border-black
+}
+
+.benefit-basic {
+  @apply col-span-6 md:col-span-3 lg:col-span-2 text-center md:text-start py-4 xl:pb-16 md:pr-2
 }
