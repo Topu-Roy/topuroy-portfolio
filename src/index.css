@@ -29,3 +29,10 @@ p, li, a, button {@apply font-roboto text-textColor}
 .benefit-basic {
   @apply col-span-6 md:col-span-3 lg:col-span-2 text-center md:text-start py-4 xl:pb-16 md:pr-2
 }
+
+.menu-open {
+  @apply translate-x-0 md:hidden z-50 fixed top-0 left-0 right-0 bottom-0 bg-backgroundColor px-4 transition-transform ease-in-out duration-150
+}
+.menu-close {
+  @apply translate-x-[200%] md:hidden z-50 fixed top-0 left-0 right-0 bottom-0 bg-backgroundColor px-4 transition-transform ease-in-out duration-150
+}
